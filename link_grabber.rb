@@ -9,5 +9,8 @@ end
 
 open(url) { |page| page_content = page.read() 
   links = page_content.scan(/href="(.*?)"/).flatten
-  links.each {|link| puts link}
+File.open("grab.txt", "w") do |f|
+  f.puts "Links from " + url + " :"
+  links.each {|link| f.puts link}
+end
 }
