@@ -36,27 +36,3 @@ sortedFile = File.new("bubble_sorted.text", "w")
 array_source.each{|i| sortedFile.write(i.to_s + "\n")}
 time2 = Time.now
 puts time2 - time1
-
-# end
-# Internet method
-
-time1 = Time.now
-class Array
-  def bubblesort1!
-    length.times do |j|
-      for i in 1...(length - j)
-        if self[i] < self[i - 1]
-          self[i], self[i - 1] = self[i - 1], self[i]
-        end
-      end
-    end
-    self
-  end
-end
-
-array_source = array_source.get_array(source)
-array_source.bubblesort1!
-sortedFile1 = File.new("bubble_sorted1.text", "w")
-array_source.each{|i| sortedFile1.write(i.to_s + "\n")}
-time2 = Time.now
-puts time2 - time1
