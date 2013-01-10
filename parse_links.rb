@@ -1,3 +1,5 @@
+# реализовать рекурсией
+
 require 'open-uri'
 
 def get_links(url_value)
@@ -32,8 +34,8 @@ def get_links(url_value)
     else next
     end
   end
-#puts adress.uniq.inspect
-  adress.uniq!
+puts adress.uniq.inspect
+  return adress.uniq
 end
 
 def get_sublayer_links(url_array)
@@ -59,7 +61,7 @@ end
 
 puts "Processing #{url}"
 grabbed_links = get_links(url)
-#puts grabbed_links.inspect
+puts grabbed_links.inspect
 
 aFile = File.new("parse_links.txt", "w")
 unless grabbed_links == nil || grabbed_links.size == 0
