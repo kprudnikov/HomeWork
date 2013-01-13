@@ -1,3 +1,5 @@
+#test comment
+
 time1 = Time.now
 class Array
   def get_array(string)
