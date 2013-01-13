@@ -1,4 +1,5 @@
 #test comment
+# test master
 
 time1 = Time.now
 class Array
