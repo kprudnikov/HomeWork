@@ -1,3 +1,5 @@
+#test comment
+
 require 'open-uri'
 
 if ARGV[0]
